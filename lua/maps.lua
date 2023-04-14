@@ -13,12 +13,16 @@ map("n", "<leader>q", "<CMD>q<CR>")
 
 map("n", "<leader>so", "<CMD>:source %<CR>")
 
---map("i", "<leader>q", "<CMD>q<CR>")
---
+-- Mover entre buffers
+map("n", "<TAB>", "<CMD>:bnext<CR>")
+map("n", "<S-TAB>", "<CMD>:bprevius")
+
+-- Cerrar buffers
+map("n", "cl", "<CMD>:bdelete<CR>")
 
 -- NeoTree
-map("n", "<leader>nt", "<CMD>Neotree toggle<CR>")
-map("n", "<leader>o", "<CMD>Neotree focus<CR>")
+map("n", "<leader>nt", "<CMD>NvimTreeToggle<CR>")
+--map("n", "<leader>o", "<CMD>NvimTreeFocus<CR>")
 
 -- Windows
 --map("n", "<leader>ñ", "<CMD>vsplit<CR>")
