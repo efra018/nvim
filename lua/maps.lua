@@ -5,11 +5,11 @@ end
 
 
 -- Save
-map("n", "<leader>w", "<CMD>update<CR>")
+map("n", "<C-s>", "<CMD>w<CR>")
 
 
 -- Quit
-map("n", "<leader>q", "<CMD>q<CR>")
+map("n", "<C-w>", "<CMD>q<CR>")
 
 map("n", "<leader>so", "<CMD>:source %<CR>")
 

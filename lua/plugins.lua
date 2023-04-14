@@ -59,8 +59,38 @@ return require('packer').startup(function(use)
     -- Bufferline
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
+    -- Neoclide COC
+    use {'neoclide/coc.nvim', branch = 'release'}
+
     -- LSP
-    use 'neovim/nvim-lspconfig'
+    --use 'neovim/nvim-lspconfig'
+
+    -- Mason: Portable package manager
+	--use({
+	--	"williamboman/mason.nvim",
+	--	config = function()
+	--		require("mason").setup()
+	--	end,
+	--})
+
+	--use({
+	--	"williamboman/mason-lspconfig.nvim",
+	--	--config = function()
+	--	--	require("slydragonn.configs.mason-lsp")
+	--	--end,
+	--	after = "mason.nvim",
+	--})
+
+    -- Treesitter
+	--use({
+	--	"nvim-treesitter/nvim-treesitter",
+	--	run = function()
+	--		require("nvim-treesitter.install").update({ with_sync = true })
+	--	end,
+	--	--config = function()
+	--	--	require("slydragonn.configs.treesitter")
+	--	--end,
+	--})
 
 
 
