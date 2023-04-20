@@ -28,15 +28,15 @@ return require('packer').startup(function(use)
     })
 
     -- Tree
-    use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-      },
-      config = function()
-        require("nvim-tree").setup {}
-      end
-    }
+    --use {
+    --  --'nvim-tree/nvim-tree.lua',
+    --  requires = {
+    --    'nvim-tree/nvim-web-devicons', -- optional
+    --  },
+    --  --config = function()
+    --  --  require("nvim-tree").setup {}
+    --  --end
+    --}
 
     -- Tmux Navigation
     use 'alexghergh/nvim-tmux-navigation'
@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
       end
     }
 
+    -- Telescope
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',
   -- or                            , branch = '0.1.x',
@@ -57,10 +58,24 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     -- Bufferline
+    --use {'akinsho/bufferline.nvim', requires = 'nvim-tree/nvim-web-devicons'}
+    -- using packer.nvim
     use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
     -- Neoclide COC
     use {'neoclide/coc.nvim', branch = 'release'}
+    
+    -- TREE
+    --use 'preservim/nerdtree'
+
+
+    use {
+          'lewis6991/gitsigns.nvim',
+          config = function()
+            require('gitsigns').setup()
+          end
+    }
+    --use 'airblade/vim-gitgutter'
 
     -- LSP
     --use 'neovim/nvim-lspconfig'
@@ -104,5 +119,14 @@ return require('packer').startup(function(use)
 	--		"MunifTanjim/nui.nvim",
 	--	},
 	--})
-    --
+
+    use {'nvim-tree/nvim-tree.lua',
+              requires = {
+                'nvim-tree/nvim-web-devicons', -- optional
+              },
+        config = function()
+        require("nvim-tree").setup {}
+  end
+}
+    
 end)
