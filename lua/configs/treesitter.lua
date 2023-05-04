@@ -6,22 +6,25 @@ end
 ts.setup({
 	highlight = {
 		enable = true,
-		additional_vim_regex_highlighting = false,
+		--additional_vim_regex_highlighting = false,
+        disable = {},
 	},
 	context_commentstring = {
 		enable = true,
 		enable_autocmd = false,
 	},
 	ensure_installed = {
-		"markdown",
+        "python",
+		--"markdown",
 		"tsx",
 		"typescript",
 		"javascript",
-		"toml",
-		"c_sharp",
+        "tsx",
+		--"toml",
+		--"c_sharp",
 		"json",
-		"yaml",
-		"rust",
+		--"yaml",
+		--"rust",
 		"css",
 		"html",
 		"lua",
@@ -37,5 +40,5 @@ ts.setup({
 	indent = { enable = true },
 })
 
---local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 --parser_config.tsx.filetype_to_parsername = { "javascript", "typescript.tsx" }

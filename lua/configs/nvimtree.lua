@@ -3,13 +3,13 @@ vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
   sort_by = "case_sensitive",
-  view = {
-    mappings = {
-      list = {
-        { key = "u", action = "dir_up" },
-      },
-    },
-  },
+  --view = {
+  --  mappings = {
+  --    list = {
+  --      { key = "u", action = "dir_up" },
+  --    },
+  --  },
+  --},
   actions = {
     open_file = { quit_on_open = true }
   },

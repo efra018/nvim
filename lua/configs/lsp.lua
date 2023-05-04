@@ -1,28 +1,59 @@
-local status, nvim_lsp = pcall(require, "lspconfig")
-if not status then
-	return
-end
+--local status, nvim_lsp = pcall(require, "lspconfig")
+--if not status then
+--	return
+--end
 
-local protocol = require("vim.lsp.protocol")
+vim.opt.signcolumn = 'yes' -- Reserve space for diagnostic icons
 
-local on_attach = function(client, bufnr)
-	-- format on save
-	if client.server_capabilities.documentFormattingProvider then
-		vim.api.nvim_create_autocmd("BufWritePre", {
-			group = vim.api.nvim_create_augroup("Format", { clear = true }),
-			buffer = bufnr,
-			callback = function()
-				vim.lsp.buf.formatting_seq_sync()
-			end,
-		})
-	end
-end
+local lsp = require('lsp-zero').preset({})
 
---local capabilities = require("cmp_nvim_lsp").default_capabilities()
+lsp.on_attach(function(client, bufnr)
+  lsp.default_keymaps({buffer = bufnr})
+end)
 
+lsp.preset('recommended')
 
--- Python
-nvim_lsp.pyright.setup({
-	on_attach = on_attach,
-	capabilities = capabilities,
+lsp.ensure_installed({
+  'tsserver',
+  'eslint',
+  'emmet_ls',
+  'lua_ls',
+  -- 'sumneko_lua',
+  'pyright',
+  'bashls',
+  'cssls',
+  'eslint',
+  'html',
+  'jsonls',
+  'tsserver',
+  'yamlls'
 })
+
+lsp.nvim_workspace()
+
+lsp.set_sign_icons({
+  --error = '✘',
+  warn = '▲',
+  --hint = '⚑',
+  info = '»'
+})
+
+local cmp = require('cmp')
+local cmp_action = require('lsp-zero').cmp_action()
+
+require('luasnip.loaders.from_vscode').lazy_load()
+
+cmp.setup({
+  sources = {
+    {name = 'nvim_lsp'},
+    {name = 'luasnip'},
+  },
+  mapping = {
+    ['<C-f>'] = cmp_action.luasnip_jump_forward(),
+    ['<C-b>'] = cmp_action.luasnip_jump_backward(),
+  }
+})
+
+
+lsp.setup()
+
