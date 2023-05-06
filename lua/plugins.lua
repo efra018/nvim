@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
     use { 'michaelb/sniprun'}
     use 'onsails/lspkind.nvim'
 
+    -- Indent Line
+    use "lukas-reineke/indent-blankline.nvim"
+
     -- Theme
     use ({'ellisonleao/gruvbox.nvim', config = function()
         require("configs.gruvbox")
