@@ -18,7 +18,7 @@ lsp.ensure_installed({
   'emmet_ls',
   'lua_ls',
   -- 'sumneko_lua',
-  'pyright',
+  --'pyright',
   'bashls',
   'cssls',
   'eslint',
