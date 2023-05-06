@@ -11,6 +11,21 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
 end)
 
+--lsp.pyright.setup {
+--    --on_attach = on_attach,
+--    settings = {
+--        pyright = {
+--            autoImportCompletion = true,
+--        },python = {
+--            analysis = {
+--                autoSearchPaths = true,
+--                diagnosticMode = 'openFilesOnly',
+--                useLibraryCodeForTypes = true,
+--                typeCheckingMode = 'off'
+--            }
+--        }
+--    }
+--}
 lsp.preset('recommended')
 lsp.ensure_installed({
   'tsserver',
@@ -57,5 +72,18 @@ cmp.setup({
 })
 
 
-lsp.setup()
+lsp.setup({
+    settings = {
+        pyright = {
+            autoImportCompletion = true,
+        },python = {
+            analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = 'openFilesOnly',
+                useLibraryCodeForTypes = true,
+                typeCheckingMode = 'off'
+            }
+        }
+    }
+})
 
