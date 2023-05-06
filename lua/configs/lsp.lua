@@ -12,7 +12,6 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.preset('recommended')
-
 lsp.ensure_installed({
   'tsserver',
   'eslint',

@@ -20,7 +20,7 @@ return require('packer').startup(function(use)
 
     --
     use { 'michaelb/sniprun'}
-    use 'onsails/lspkind.nvim'
+    --use 'onsails/lspkind.nvim'
 
     -- Theme
     use ({'ellisonleao/gruvbox.nvim', config = function()
