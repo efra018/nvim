@@ -12,10 +12,10 @@ require("configs.gitsigns")
 require("configs.telescope")
 require("configs.mason")
 --require("configs.bufferline")
---require("configs.lsp")
-require("configs.minimallsp")
+require("configs.lsp")
+--require("configs.minimallsp")
 require("configs.treesitter")
---require("configs.cmp")
+require("configs.cmp")
 
 local themeStatus, gruvbox = pcall(require, "gruvbox")
 
