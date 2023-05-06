@@ -46,10 +46,10 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     --HighLight
-    use { 'm-demare/hlargs.nvim' }
+    --use { 'm-demare/hlargs.nvim' }
 
     -- Bufferline
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    --use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
     -- TREE
     --use 'preservim/nerdtree'
