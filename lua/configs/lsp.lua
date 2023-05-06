@@ -72,6 +72,8 @@ cmp.setup({
 })
 
 
+
+-- https://github.com/microsoft/pyright/blob/main/docs/settings.md
 lsp.setup({
     settings = {
         pyright = {
