@@ -13,17 +13,32 @@ cmp.setup({
       end,
     },
     window = {
-        completion = cmp.config.window.bordered({ border = "simple" }),
-        documentation = cmp.config.window.bordered({ border = "simple" }),
+        completion = cmp.config.window.bordered({ border = "single" }),
+        documentation = cmp.config.window.bordered({ border = "single" }),
 
     },
     preselect = 'item',
     completion = {
         completeopt = 'menu,menuone,noinsert'
     },
+    sources = cmp.config.sources({
+      { name = 'nvim_lsp' },
+      --{ name = 'vsnip' }, -- For vsnip users.
+      -- { name = 'luasnip' }, -- For luasnip users.
+      -- { name = 'ultisnips' }, -- For ultisnips users.
+      -- { name = 'snippy' }, -- For snippy users.
+      { name = 'buffer' },
+    }),
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({select = false}),
     },
+    --cmp.setup.cmdline(':', {
+    --    mapping = cmp.mapping.preset.cmdline(),
+    --    sources = cmp.config.sources({
+    --      { name = 'path' },
+    --      { name = 'cmdline' }
+    --    })
+    --}),
     formatting = {
         fields = {'abbr', 'kind', 'menu'},
         --format = require('lspkind').cmp_format({
