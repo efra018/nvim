@@ -25,16 +25,19 @@ lsp.ensure_installed({
   'html',
   'jsonls',
   'tsserver',
-  'yamlls'
+  --'yamlls'
 })
 
 lsp.nvim_workspace()
 
-lsp.set_sign_icons({
-  --error = '✘',
-  warn = '▲',
-  --hint = '⚑',
-  info = '»'
+lsp.set_preferences({
+    suggest_lsp_servers = false,
+    sign_icons = {
+        error = 'E',
+        warn = 'W',
+        hint = 'H',
+        info = 'I'
+    }
 })
 
 local cmp = require('cmp')
