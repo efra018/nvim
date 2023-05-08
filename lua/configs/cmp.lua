@@ -1,6 +1,42 @@
 -- Make sure you setup `cmp` after lsp-zero
+-- symbol_map = {
+    --  Text = "󰉿",
+    --  Method = "󰆧",
+    --  Function = "󰊕",
+    --  Constructor = "",
+    --  Field = "󰜢",
+    --  Variable = "󰀫",
+    --  Class = "󰠱",
+    --  Interface = "",
+    --  Module = "",
+    --  Property = "󰜢",
+    --  Unit = "󰑭",
+    --  Value = "󰎠",
+    --  Enum = "",
+    --  Keyword = "󰌋",
+    --  Snippet = "",
+    --  Color = "󰏘",
+    --  File = "󰈙",
+    --  Reference = "󰈇",
+    --  Folder = "󰉋",
+    --  EnumMember = "",
+    --  Constant = "󰏿",
+    --  Struct = "󰙅",
+    --  Event = "",
+    --  Operator = "󰆕",
+    --  TypeParameter = "",
+    --},
 
 local cmp = require('cmp')
+
+local icons = {
+    Text = "󰉿",
+    Method = "󰆧",
+    Function = "󰊕",
+    Variable = "󰀫",
+    Snippet = "",
+    Class = "󰠱",
+}
 
 cmp.setup({
     snippet = {
@@ -39,12 +75,23 @@ cmp.setup({
     --      { name = 'cmdline' }
     --    })
     --}),
+    --formatting = {
+    --    fields = {'abbr', 'kind', 'menu'},
+    --    format = require('lspkind').cmp_format({
+    --      mode = 'symbol_text', -- show only symbol annotations
+    --      --maxwidth = 50, -- prevent the popup from showing more than provided characters
+    --      ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
+    --    })
+    --}
     formatting = {
-        fields = {'abbr', 'kind', 'menu'},
-        format = require('lspkind').cmp_format({
-          mode = 'symbol_text', -- show only symbol annotations
-          --maxwidth = 50, -- prevent the popup from showing more than provided characters
-          ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead
-        })
+        fields = { "kind", "abbr", "menu" },
+            format = function (entry, vim_item)
+                vim_item.kind = " " .. (icons[vim_item.kind] or "")
+                vim_item.menu = "->" .. icons[entry.source.name]
+
+                vim_item.abbr = vim_item.abbr:match("[^(]+")
+        return vim_item
+    end
     }
 })
+
