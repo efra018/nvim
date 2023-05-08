@@ -72,12 +72,11 @@ cmp.setup({
 })
 
 
-
 -- https://github.com/microsoft/pyright/blob/main/docs/settings.md
 lsp.setup({
     settings = {
         pyright = {
-            autoImportCompletion = true,
+            autoImportCompletions = true,
         },python = {
             analysis = {
                 autoSearchPaths = true,
