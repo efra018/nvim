@@ -13,7 +13,8 @@ require("configs.telescope")
 --require("configs.bufferline")
 require("configs.lsp")
 require("configs.treesitter")
-require("configs.cmp")
+require("configs.democmp")
+--require("configs.cmp")
 
 local themeStatus, gruvbox = pcall(require, "gruvbox")
 
