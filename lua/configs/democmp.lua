@@ -86,53 +86,13 @@ cmp.setup({
     }
 })
 
-local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-local handlers = require('nvim-autopairs.completion.handlers')
-cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done({
-    filetypes = {
-      -- "*" is a alias to all filetypes
-      ["*"] = {
-        ["("] = {
-          kind = {
-            cmp.lsp.CompletionItemKind.Function,
-            cmp.lsp.CompletionItemKind.Method,
-          },
-          handler = handlers["*"]
-        }
-      },
-      lua = {
-        ["("] = {
-          kind = {
-            cmp.lsp.CompletionItemKind.Function,
-            cmp.lsp.CompletionItemKind.Method
-          },
-          ---@param char string
-          ---@param item table item completion
-          ---@param bufnr number buffer number
-          ---@param rules table
-          ---@param commit_character table<string>
-          handler = function(char, item, bufnr, rules, commit_character)
-            -- Your handler function. Inpect with print(vim.inspect{char, item, bufnr, rules, commit_character})
-          end
-        }
-      },
-      -- Disable for tex
-      tex = false
-    }
-  })
-)
-
-
-
 
 
 
 
 -- Set up lspconfig.
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-  require('lspconfig')['pyright'].setup {
-    capabilities = capabilities
-  }
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+require('lspconfig')['pyright'].setup {
+  capabilities = capabilities
+}
