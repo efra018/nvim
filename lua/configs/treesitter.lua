@@ -29,6 +29,9 @@ ts.setup({
 		"html",
 		"lua",
 	},
+    autopairs = {
+        enable = true
+    },
 	rainbow = {
 		enable = true,
 		disable = { "html" },
