@@ -14,6 +14,7 @@ require("configs.telescope")
 require("configs.lsp")
 require("configs.treesitter")
 require("configs.democmp")
+require("configs.autopairs")
 --require("configs.cmp")
 
 local themeStatus, gruvbox = pcall(require, "gruvbox")
