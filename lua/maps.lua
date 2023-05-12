@@ -2,7 +2,7 @@ local function map(mode, lhs, rhs)
     vim.keymap.set(mode, lhs, rhs, {silent = true})  
 end
 
--- Deselected
+-- Quitar seleccion
 map("n", "<leader>nh", "<CMD>:noh<CR>")
 
 -- Save
