@@ -2,7 +2,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 require("nvim-tree").setup({
-  sort_by = "case_sensitive",
+    sort_by = "case_sensitive",
   --view = {
   --  mappings = {
   --    list = {
@@ -10,54 +10,53 @@ require("nvim-tree").setup({
   --    },
   --  },
   --},
-  actions = {
-    open_file = { quit_on_open = true }
-  },
-  update_focused_file = {
-    enable = true,
-    update_cwd = true
-  },
-  filters = {
-    custom = { '^.git$', '^node_modules$' }
-  },
-  git = {
-    enable = true
-  },
-  log = {
-    enable = true,
-    types = {
-      diagnostics = true
+    actions = {
+        open_file = { quit_on_open = true }
     },
-  },
-  diagnostics = {
-    enable = true,
-    show_on_dirs = false,
-    debounce_delay = 50,
+    update_focused_file = {
+        enable = true,
+        update_cwd = true
+    },
+    filters = {
+        custom = { '^.git$', '^node_modules$' }
+    },
+    git = {
+        enable = true
+    },
+    log = {
+        enable = true,
+        types = {
+            diagnostics = true
+        },
+    },
+    diagnostics = {
+        enable = true,
+        show_on_dirs = false,
+        debounce_delay = 50,
+        icons = {
+            hint = '',
+            info = '',
+            warning = '',
+            error = ''
+        },
+    },
+    renderer = {
+        indent_width = 2,
+        --root_folder_label = true,
+        --highlight_git = false,
+        --highlight_opened_files = "none",
+        indent_markers = {
+        enable = true,
+    },
     icons = {
-      hint = '',
-      info = '',
-      warning = '',
-      error = ''
+        show = {
+            file = true,
+            folder = true,
+            folder_arrow = true,
+            git = true,
+        },
     },
-  },
-  renderer = {
-      indent_width = 2,
-    --root_folder_label = true,
-    --highlight_git = false,
-    --highlight_opened_files = "none",
-    indent_markers = {
-      enable = true,
-    },
-
-    icons = {
-      show = {
-        file = true,
-        folder = true,
-        folder_arrow = true,
-        git = true,
-      },
-    },
-  },
+},
   --on_attach = function(bufnr)
   --  vim.keymap.set('n', '<leader>nt', '<cmd>NvimTreeToggle<cr>',
   --    { desc = 'toggle', buffer = bufnr, noremap = true, silent = true, nowait = true })
