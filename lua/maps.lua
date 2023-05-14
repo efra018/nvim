@@ -33,3 +33,6 @@ map("n", "<leader>nt", "<cmd>NvimTreeToggle<cr>")
 -- Windows
 --map("n", "<leader>ñ", "<CMD>vsplit<CR>")
 --map("n", "<leader>p", "<CMD>split<CR>")
+
+-- Git
+map("n", "<leader>g", "<CMD>:Git<CR>")
