@@ -105,7 +105,6 @@ return require('packer').startup(function(use)
               {'rafamadriz/friendly-snippets'},
           }
       }
-    }
     -- AutoPairs
     use {
 	    "windwp/nvim-autopairs",
