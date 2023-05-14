@@ -22,6 +22,9 @@ return require('packer').startup(function(use)
     use { 'michaelb/sniprun'}
     use 'onsails/lspkind.nvim'
 
+    -- Indent Line
+    use "lukas-reineke/indent-blankline.nvim"
+
     -- Theme
     use ({'ellisonleao/gruvbox.nvim', config = function()
         require("configs.gruvbox")
@@ -46,7 +49,7 @@ return require('packer').startup(function(use)
     use 'nvim-lualine/lualine.nvim'
 
     --HighLight
-    use { 'm-demare/hlargs.nvim' }
+    --use { 'm-demare/hlargs.nvim' }
 
     -- Bufferline
     --use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
@@ -102,7 +105,10 @@ return require('packer').startup(function(use)
               {'rafamadriz/friendly-snippets'},
           }
       }
-   
-
-
+    }
+    -- AutoPairs
+    use {
+	    "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
 end)

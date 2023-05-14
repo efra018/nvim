@@ -2,6 +2,9 @@ local function map(mode, lhs, rhs)
     vim.keymap.set(mode, lhs, rhs, {silent = true})  
 end
 
+-- Quitar seleccion
+map("n", "<leader>nh", "<CMD>:noh<CR>")
+
 -- Save
 map("n", "<C-s>", "<CMD>w<CR>")
 
@@ -30,3 +33,6 @@ map("n", "<leader>nt", "<cmd>NvimTreeToggle<cr>")
 -- Windows
 --map("n", "<leader>ñ", "<CMD>vsplit<CR>")
 --map("n", "<leader>p", "<CMD>split<CR>")
+
+-- Git
+map("n", "<leader>g", "<CMD>:Git<CR>")

@@ -11,8 +11,22 @@ lsp.on_attach(function(client, bufnr)
   lsp.default_keymaps({buffer = bufnr})
 end)
 
+--lsp.pyright.setup {
+--    --on_attach = on_attach,
+--    settings = {
+--        pyright = {
+--            autoImportCompletion = true,
+--        },python = {
+--            analysis = {
+--                autoSearchPaths = true,
+--                diagnosticMode = 'openFilesOnly',
+--                useLibraryCodeForTypes = true,
+--                typeCheckingMode = 'off'
+--            }
+--        }
+--    }
+--}
 lsp.preset('recommended')
-
 lsp.ensure_installed({
   --'tsserver',
   --'eslint',
@@ -20,12 +34,12 @@ lsp.ensure_installed({
   'lua_ls',
   -- 'sumneko_lua',
   --'pyright',
-  --'bashls',
-  --'cssls',
-  --'eslint',
-  --'html',
-  --'jsonls',
-  --'tsserver',
+  'bashls',
+  'cssls',
+  'eslint',
+  'html',
+  'jsonls',
+  'tsserver',
   --'yamlls'
 })
 
@@ -60,7 +74,21 @@ cmp.setup({
 })
 
 
-lsp.setup()
+-- https://github.com/microsoft/pyright/blob/main/docs/settings.md
+lsp.setup({
+    settings = {
+        pyright = {
+            autoImportCompletions = true,
+        },python = {
+            analysis = {
+                autoSearchPaths = true,
+                diagnosticMode = 'openFilesOnly',
+                useLibraryCodeForTypes = true,
+                typeCheckingMode = 'off'
+            }
+        }
+    }
+})
 
 vim.diagnostic.config({
     virtual_text = true
