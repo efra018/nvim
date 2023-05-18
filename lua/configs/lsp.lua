@@ -28,9 +28,9 @@ end)
 --}
 lsp.preset('recommended')
 lsp.ensure_installed({
-  'tsserver',
-  'eslint',
-  'emmet_ls',
+  --'tsserver',
+  --'eslint',
+  --'emmet_ls',
   'lua_ls',
   -- 'sumneko_lua',
   --'pyright',
@@ -59,11 +59,13 @@ local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
 
 require('luasnip.loaders.from_vscode').lazy_load()
+--require('pyright,loaders.from_vscode').lazy_load()
 
 cmp.setup({
   sources = {
     {name = 'nvim_lsp'},
     {name = 'luasnip'},
+    --{name = 'pyright'},
   },
   mapping = {
     ['<C-f>'] = cmp_action.luasnip_jump_forward(),
@@ -88,3 +90,6 @@ lsp.setup({
     }
 })
 
+vim.diagnostic.config({
+    virtual_text = true
+})
