@@ -62,7 +62,6 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
           end
     }
-
     use 'tpope/vim-fugitive'
 
     -- Treesitter
@@ -73,7 +72,6 @@ return require('packer').startup(function(use)
             ts_update()
         end,
     }
-
     use 'nvim-treesitter/nvim-treesitter-context'
 
 
@@ -109,4 +107,10 @@ return require('packer').startup(function(use)
 	    "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+
+    -- Colorizer HEX
+    use 'norcalli/nvim-colorizer.lua'
+
+    -- Lint
+    use 'sheerun/vim-polyglot'
 end)

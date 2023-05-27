@@ -36,7 +36,7 @@ lsp.ensure_installed({
   --'pyright',
   'bashls',
   'cssls',
-  'eslint',
+  --'eslint',
   'html',
   'jsonls',
   'tsserver',
@@ -91,5 +91,15 @@ lsp.setup({
 })
 
 vim.diagnostic.config({
-    virtual_text = true
+  underline = true,
+  signs = true,
+  --virtual_text = {
+  --  source = "if_many",  -- Or "if_many"
+  --  prefix = '●', -- Could be '■', '▎', 'x'
+  --},
+  severity_sort = true,
+  float = {
+    border = 'single',
+    source = "always",  -- Or "if_many"
+  },
 })
