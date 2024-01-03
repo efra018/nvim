@@ -1,0 +1,2 @@
+1.- 'coffebar/neovim-project'
+2.- 'yamatsum/nvim-cursorline',
