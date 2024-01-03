@@ -91,11 +91,6 @@ return {
 		dynamic_preview_title = true,
 		--path_display = { "smart" },
 	},
-	pickers = {
-		find_files = {
-			hidden = true,
-		},
-	},
 	config = function()
 		--local builtin = require("telescope.builtin")
 		--local keymap = vim.keymap
