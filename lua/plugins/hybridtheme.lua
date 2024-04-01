@@ -1,0 +1,48 @@
+return {
+	--"HoNamDuong/hybrid.nvim",
+	--lazy = false,
+	--priority = 1000,
+	----opts = {},
+	--config = function()
+	--	vim.cmd.colorscheme("hybrid")
+	--	-- Default options:
+	--	require("hybrid").setup({
+	--		terminal_colors = true,
+	--		undercurl = true,
+	--		underline = true,
+	--		bold = true,
+	--		italic = {
+	--			strings = false,
+	--			emphasis = true,
+	--			comments = false,
+	--			folds = true,
+	--		},
+	--		--italic = {
+	--		--	strings = false,
+	--		--	emphasis = false,
+	--		--	comments = false,
+	--		--	folds = false,
+	--		--},
+	--		strikethrough = true,
+	--		inverse = true,
+	--		transparent = false,
+	--		-- overrides = function(highlights, colors) end,
+	--		--overrides = function(hl, c)
+	--		--	local background = "#1d1f21"
+	--		--	hl.TelescopeNormal = {
+	--		--		fg = c.fg,
+	--		--		bg = background,
+	--		--	}
+	--		--	hl.TelescopeBorder = {
+	--		--		fg = c.fg_hard,
+	--		--		bg = c.bg,
+	--		--	}
+	--		--	hl.TelescopeTitle = {
+	--		--		fg = c.fg_hard,
+	--		--		bg = c.bg,
+	--		--		bold = true,
+	--		--	}
+	--		--end,
+	--	})
+	--end,
+}
