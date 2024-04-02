@@ -37,20 +37,20 @@ return {
 			--filters = {
 			--  custom = {"^.git$"},
 			--},
-			--actions = {
-			--	open_file = {
-			--		quit_on_open = false,
-			--		window_picker = {
-			--			enable = false,
-			--		},
-			--	},
-			--},
+			actions = {
+				open_file = {
+					quit_on_open = true,
+					window_picker = {
+						enable = false,
+					},
+				},
+			},
 			update_focused_file = {
-				enable = true,
+				enable = false,
 				--update_cwd = true,
 			},
 			git = {
-				enable = false,
+				enable = true,
 				--ignore = true,
 				--timeout = 500,
 			},
