@@ -55,6 +55,12 @@ return {
 				--timeout = 500,
 			},
 			renderer = {
+				highlight_git = true,
+				icons = {
+					show = {
+						git = true,
+					},
+				},
 				full_name = true,
 				indent_width = 2,
 				indent_markers = {
