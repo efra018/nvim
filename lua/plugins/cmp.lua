@@ -45,7 +45,7 @@ return {
 
 		local luasnip = require("luasnip")
 
-		--local lspkind = require("lspkind")
+		-- local lspkind = require("lspkind")
 		local has_words_before = function()
 			unpack = unpack or table.unpack
 			local line, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -74,7 +74,7 @@ return {
 				["<C-b>"] = cmp.mapping.scroll_docs(-4),
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-ñ>"] = cmp.mapping.complete(),
-				["<C-space>"] = cmp.mapping.abort(),
+				["<C-e>"] = cmp.mapping.abort(),
 				["<CR>"] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 				["<Tab>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
