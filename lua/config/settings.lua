@@ -11,7 +11,9 @@ opt.scrolloff = 5
 opt.sidescrolloff = 5
 opt.title = true
 opt.hidden = true
-opt.colorcolumn = "80"
+
+opt.wrap = false
+--opt.colorcolumn = "80"
 
 opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
