@@ -13,7 +13,7 @@ opt.title = true
 opt.hidden = true
 
 opt.wrap = false
---opt.colorcolumn = "80"
+opt.colorcolumn = "80"
 
 opt.mouse:append("a")
 opt.clipboard:append("unnamedplus")
