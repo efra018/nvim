@@ -28,10 +28,9 @@ return {
 			-- custom mappings
 			--vim.keymap.set("n", "<leader>nt", api.tree.toggle, opts("Toggle"))
 			--vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
-			vim.keymap.set("n", "<C-u>", api.tree.change_root_to_parent, opts("Up"))
+			vim.keymap.set("n", "<S-u>", api.tree.change_root_to_parent, opts("Up"))
 			vim.keymap.set("n", "?", api.tree.toggle_help, opts("Help"))
 		end
-
 		require("nvim-tree").setup({
 			on_attach = my_on_attach,
 			--filters = {
