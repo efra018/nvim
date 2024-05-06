@@ -16,9 +16,10 @@ dap.configurations.dart = {
 		type = "dart",
 		request = "launch",
 		name = "Launch dart",
-		dartSdkPath = "C:/flutter/bin/dart-sdk/bin/dart", -- ensure this is correct
-		flutterSdkPath = "C:/flutter/bin/flutter", -- ensure this is correct
-		program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+		dartSdkPath = "/usr/bin/flutter/bin/cache/dart-sdk/bin", -- ensure this is correct
+		flutterSdkPath = "/usr/flutter/bin", -- ensure this is correct
+		-- program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+		program = "${file}", -- ensure this is correct
 		cwd = "${workspaceFolder}",
 		-- console = "internalConsole",
 	},
@@ -26,9 +27,10 @@ dap.configurations.dart = {
 		type = "flutter",
 		request = "launch",
 		name = "Launch flutter",
-		dartSdkPath = "C:/flutter/bin/dart-sdk/bin/dart", -- ensure this is correct
-		flutterSdkPath = "C:/flutter/bin/flutter", -- ensure this is correct
-		program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+		dartSdkPath = "/usr/bin/flutter/bin/cache/dart-sdk/bin", -- ensure this is correct
+		flutterSdkPath = "/usr/flutter/bin", -- ensure this is correct
+		-- program = "${workspaceFolder}/lib/main.dart", -- ensure this is correct
+		program = "${file}", -- ensure this is correct
 		cwd = "${workspaceFolder}",
 		-- console = "internalConsole",
 	},

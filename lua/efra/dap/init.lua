@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-fields
 local dap, dapui, hydra = require("dap"), require("dapui"), require("hydra")
 
 -- Setup Virtual Text

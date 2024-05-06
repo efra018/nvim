@@ -8,9 +8,9 @@ return {
 	},
 	config = function()
 		require("flutter-tools").setup({
-			require("telescope").load_extension("flutter"),
-			dart_path = "C:/flutter/bin/dart.bat",
-			flutter_path = "C:/flutter/bin/flutter.bat",
+			--require("telescope").load_extension("flutter"),
+			dart_path = "/usr/bin/flutter/bin/dart.bat",
+			flutter_path = "/usr/bin/flutter/bin/flutter.bat",
 			--ui = {
 			--	-- the border type to use for all floating windows, the same options/formats
 			--	-- used for ":h nvim_open_win" e.g. "single" | "shadow" | {<table-of-eight-chars>}
@@ -70,7 +70,7 @@ return {
 				settings = {
 					showTodos = true,
 					completeFunctionCalls = true,
-					analysisExcludedFolders = { "C:/flutter/packages" },
+					analysisExcludedFolders = { "/usr/bin/flutter/packages" },
 					renameFilesWithClasses = "prompt", -- "always"
 					enableSnippets = true,
 					updateImportsOnRename = true, -- Whether to update imports and other directives when files are renamed. Required for `FlutterRename` command.

@@ -8,13 +8,12 @@ keymap.set("n", "<leader>so", "<CMD>:source %<CR>")
 keymap.set("n", "<leader>nh", "<CMD>:noh<CR>")
 
 -- Guardar
-keymap.set("n", "<C-s>", "<CMD>:w<CR>")
+keymap.set("n", "<C-s>", "<CMD>:w!<CR>")
 
 -- Salir
 keymap.set("n", "<C-w>", "<CMD>:q<CR>")
 
 -- Salir y guardar
-keymap.set("n", "<leader>x", "<CMD>:x<CR>")
 
 -- Mover entre buffers
 keymap.set("n", "<TAB>", "<CMD>:bnext<CR>")

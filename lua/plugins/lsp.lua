@@ -58,6 +58,9 @@ return {
 			end,
 		})
 		require("neodev").setup()
+		require("lspconfig").clangd.setup({
+			cmd = { "clangd" },
+		})
 		require("lspconfig").lua_ls.setup({
 			on_attach = on_attach,
 			settings = {
